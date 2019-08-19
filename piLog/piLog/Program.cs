@@ -132,6 +132,10 @@ namespace piLog
                         {
                             Console.WriteLine(s + "\t" + "Permission issues, do not use [for now]");
                         }
+                        else
+                        {
+
+                        }
                         _text += s + "\n";
                     }
                 }
@@ -139,7 +143,6 @@ namespace piLog
                 Console.WriteLine("Available Ports: ");
                 Console.WriteLine(_text);
 
-                return;
 
                 int len = Ports.Length;
                 for(int i=0; i<len; i++)
@@ -158,6 +161,11 @@ namespace piLog
                                 // assign to list and port
                                 if (String.IsNullOrEmpty(s) == false)
                                 {
+                                    if (s.Contains("/dev/ttyS0"))
+                                    {
+                                        continue;
+                                    }
+
                                     assigned_names.Add(s);
                                     Ports[i] = new SerialPort();
                                     Ports[i].PortName = s;
