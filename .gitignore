@@ -1,0 +1,17 @@
+# ignore files [Hery]
+*.txt
+*.md
+*.dat
+*.md
+*.db
+*.docx
+*.slx
+*.mat
+*.lock
+*.pdb
+*.exe
+*.cache
+*.ide
+
+# future ignore files
+
