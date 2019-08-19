@@ -121,18 +121,21 @@ namespace piLog
                 string _text = "";
                 int N = PortNames.Length;
 
+                
 
-                if (N > 1)
+                
+                if (N > 0)
                 {
                     foreach (string s in PortNames)
                     {
                         _text += s + "\n";
                     }
                 }
-                else
-                {
-                    _text = PortNames[0];
-                }
+
+                Console.WriteLine("Available Ports: ");
+                Console.WriteLine(_text);
+
+                return;
 
                 int len = Ports.Length;
                 for(int i=0; i<len; i++)
