@@ -128,6 +128,10 @@ namespace piLog
                 {
                     foreach (string s in PortNames)
                     {
+                        if(s.Contains("/dev/ttyS0"))
+                        {
+                            Console.WriteLine(s + "\t" + "Permission issues, do not use [for now]");
+                        }
                         _text += s + "\n";
                     }
                 }
